@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { WebView } from 'react-native-webview'
 
 const PayoutPayment = ({ checkoutUrl = '', baseUrl = 'https://payout.one', uiSettings = {} }) => {
 
-	const [paymentForm, setPaymentForm] = useState(null)
+	const [paymentForm, setPaymentForm] = React.useState(null)
 
-	useEffect(() => {
+	React.useEffect(() => {
 		fetch(
 			checkoutUrl,
 			{
