@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/payout-one/payout_react_native#readme",
   "peerDependencies": {
-    "react": "^17.0.1",
+    "react": "^16.0.1",
     "react-native": "^0.63.3"
   },
   "dependencies": {

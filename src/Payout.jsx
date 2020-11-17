@@ -1,27 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { WebView } from 'react-native-webview'
 
-const PayoutPayment = ({ checkoutUrl = '', baseUrl = 'https://payout.one', uiSettings = {} }) => {
+export default class PayoutPayment extends Component {
 
-	const [paymentForm, setPaymentForm] = React.useState(null)
+	constructor(props) {
+		super(props)
+		this.state = {
+			paymentForm: null
+		}
+	}
 
-	React.useEffect(() => {
+	componentDidMount() {
 		fetch(
-			checkoutUrl,
+			this.props.checkoutUrl,
 			{
 				method: 'POST',
 				headers: {
 					Accept: '*/*'
 				},
-				body: JSON.stringify(uiSettings)
+				body: JSON.stringify(this.props.uiSettings)
 			}
 		)
-			.then((response) => setPaymentForm(response))
+			.then((response) => {
+				this.setState(() => ({
+					paymentForm: response
+				}))
+			})
 			.catch((error) => console.error(error))
-	}, [])
+	}
 
-	return (
-		<WebView source={ { html: paymentForm, baseUrl: baseUrl } } />
-	)
+	render() {
+		return (
+			<WebView source={ { html: this.state.paymentForm, baseUrl: this.props.baseUrl } } { ...this.props } />
+		)
+	}
+
 }
-export default PayoutPayment
