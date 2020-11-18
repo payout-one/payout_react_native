@@ -30,7 +30,7 @@ const PayoutPayment = ({checkoutUrl, uiSettings}) => {
 	}
 
 	return (
-		<WebView source={ { uri: uri } } { ...this.props } />
+		<WebView source={ { uri: uri } } />
 	)
 }
 
