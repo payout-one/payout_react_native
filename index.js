@@ -1,2 +1,2 @@
-import PayoutPayment from './src/Payout';
+import PayoutPayment from './src/Payout'
 export { PayoutPayment }
