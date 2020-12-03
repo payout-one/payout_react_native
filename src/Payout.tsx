@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { WebView } from 'react-native-webview'
+import { WebView, WebViewProps } from 'react-native-webview'
 
-const PayoutPayment = ({checkoutUrl, uiSettings}) => {
+type Props = {
+	checkoutUrl: string,
+	uiSettings: object,
+}
+
+export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings}) => {
 
 	const [uri, setUri] = useState(null)
 
 	useEffect(()=>{
 		const enhancedUri = processUiSettings(uiSettings)
-		setUri(checkoutUrl + enhancedUri)
+		setUri((checkoutUrl + enhancedUri) as React.SetStateAction<any>)
 	},[])
 
-	const processUiSettings = (uiSettings) => {
+	const processUiSettings = (uiSettings: any) => {
 		if (Object.keys(uiSettings).length === 0) {
 			return ''
 		}
@@ -30,8 +35,6 @@ const PayoutPayment = ({checkoutUrl, uiSettings}) => {
 	}
 
 	return (
-		<WebView source={ { uri: uri } } />
+		<WebView source={ { uri: uri } as any } />
 	)
 }
-
-export default PayoutPayment
