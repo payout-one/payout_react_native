@@ -36,7 +36,7 @@ type Props = {
 	props: WebViewProps,
 }
 
-export const PayoutPayment = ({checkoutUrl, uiSettings, props}: Props) => {
+export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props}) => {
 
 	const [uri, setUri] = useState(checkoutUrl)
 
