@@ -15,7 +15,7 @@ npm install payout-react-native-sdk
 Package exports React Native component 
 
 ```javascript
-import { PayoutPayment } from 'payout-react-native-sdk'
+import { PayoutPayment } from 'payout-react-native-sdk';
 
 ...
 
