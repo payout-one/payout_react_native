@@ -68,12 +68,12 @@ import { PayoutPayment } from 'payout-react-native-sdk'
 | Attribute  | Type | Description | Example |
 | ------------- | ------------- | ---------| ----|
 |button_color|string|Button font color|#FFFFFF|
-|button_background-color|string|Button background color|#FFFFFF|
+|button_background_color|string|Button background color|#FFFFFF|
 |button_border_size|number|Button border size|1|
 |button_border_color|string|Button border color|#FFFFFF|
 |button_border_radius|number|Button border radius|8|
-|button_hover_background-color|string|Button background color on hover|#FFFFFF|
-|button_hover_border-color|string|Button border color on hover|#FFFFFF|
+|button_hover_background_color|string|Button background color on hover|#FFFFFF|
+|button_hover_border_color|string|Button border color on hover|#FFFFFF|
 |button_hover_color|string|Button font color on hover|#FFFFFF|
 
 

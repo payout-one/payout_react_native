@@ -4,9 +4,10 @@ import { WebView, WebViewProps } from 'react-native-webview'
 type Props = {
 	checkoutUrl: string,
 	uiSettings: object,
+	props: object,
 }
 
-export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings}) => {
+export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props}) => {
 
 	const [uri, setUri] = useState(null)
 
@@ -35,6 +36,6 @@ export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings}) => {
 	}
 
 	return (
-		<WebView source={ { uri: uri } as any } />
+		<WebView source={ { uri: uri } as any } {...props} />
 	)
 }
