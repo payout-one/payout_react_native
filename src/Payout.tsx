@@ -36,7 +36,7 @@ type Props = {
 	props: WebViewProps,
 }
 
-const PayoutPayment= ({checkoutUrl, uiSettings, props}: Props) => {
+export const PayoutPayment = ({checkoutUrl, uiSettings, props}: Props) => {
 
 	const [uri, setUri] = useState(checkoutUrl)
 
@@ -68,5 +68,3 @@ const PayoutPayment= ({checkoutUrl, uiSettings, props}: Props) => {
 		<WebView source={ { uri } } {...props} />
 	)
 }
-
-export default PayoutPayment
