@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { WebView, WebViewProps } from 'react-native-webview'
+import {WebView, WebViewMessageEvent, WebViewProps} from 'react-native-webview'
 
 export type UiSettings = {
 	color?: string,
@@ -32,11 +32,12 @@ export type UiSettings = {
 
 type Props = {
 	checkoutUrl: string,
+	onClose?: () => void,
 	uiSettings?: UiSettings,
 	props?: WebViewProps,
 }
 
-export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props}) => {
+export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props, onClose}) => {
 
 	const [uri, setUri] = useState(checkoutUrl)
 
@@ -64,7 +65,18 @@ export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props})
 		return params
 	}
 
+	const onMessageHandler = (event: WebViewMessageEvent) => {
+		if(props?.onMessage){
+			props.onMessage(event)
+		} else {
+			let message  = JSON.parse(event.nativeEvent.data);
+			if(message.action && message.action === 'CLOSE') {
+				onClose && onClose()
+			}
+		}
+	}
+
 	return (
-		<WebView source={ { uri } } {...props} />
+		<WebView source={ { uri } } onMessage={(data) => onMessageHandler(data)} {...props} />
 	)
 }
