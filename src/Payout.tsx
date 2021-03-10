@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {WebViewMessageEvent, WebViewProps} from 'react-native-webview'
-import {WebView} from '@winstrike/react-native-webview'
+import {WebView, WebViewMessageEvent, WebViewProps} from 'react-native-webview'
 
 export type UiSettings = {
     color?: string,

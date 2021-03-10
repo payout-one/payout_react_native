@@ -27,8 +27,7 @@
     "react-native": "^0.63.3"
   },
   "dependencies": {
-    "react-native-webview": "11.2.1",
-    "@winstrike/react-native-webview": "11.2.6"
+    "react-native-webview": "^10.10.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
