@@ -35,7 +35,6 @@ import { PayoutPayment } from 'payout-react-native-sdk';
 | Prop  | Type | Note |
 | ------------- | ------------- | ---------|
 | checkoutUrl | string | provide checkout url from checkout request  |
-| onClose | function | callback function fired when payment form wants to close  |
 | uiSettings  | { } | object of UI settings  |
 | props  | { } | props of WebView  |
 
