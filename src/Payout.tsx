@@ -75,6 +75,6 @@ export const PayoutPayment: React.FC<Props> = ({checkoutUrl, uiSettings, props, 
     }
 
     return (
-        <WebView source={{uri}} onMessage={onMessageHandler} {...props} />
+        <WebView source={{uri}} {...props} />
     )
 }
