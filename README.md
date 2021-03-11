@@ -7,7 +7,11 @@ Payout SDK for React native
 Use the package manager to install.
 
 ```bash
-npm install payout-react-native-sdk
+npm i --save payout-react-native-sdk
+```
+
+```bash
+cd ios && pod install
 ```
 
 ## Usage
