@@ -81,6 +81,9 @@ import { PayoutPayment } from 'payout-react-native-sdk';
 |button_hover_background_color|string|Button background color on hover|#FFFFFF|
 |button_hover_border_color|string|Button border color on hover|#FFFFFF|
 |button_hover_color|string|Button font color on hover|#FFFFFF|
+|submit_button_background_color|string|Button background color on click|#FFFFFF|
+|submit_button_border_color|string|Button border color on click|#FFFFFF|
+|submit_button_color|string|Button font color on click|#FFFFFF|
 
 
 ####Card input, Expiration input, CVV input
