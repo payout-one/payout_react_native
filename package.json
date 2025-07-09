@@ -1,6 +1,6 @@
 {
   "name": "payout-react-native-sdk",
-  "version": "1.3.17",
+  "version": "1.3.18",
   "description": "Payout SDK for React native",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
