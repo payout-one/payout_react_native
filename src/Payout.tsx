@@ -51,12 +51,11 @@ const processUiSettings = (uiSettings: UiSettings = {}): string => {
   return `?${params.toString()}`;
 };
 
-export const PayoutPayment: React.FC<Props> = ({
+export const PayoutPayment = ({
   checkoutUrl,
   uiSettings,
   props,
-  onClose,
-}) => {
+}: Props) => {
   const [uri, setUri] = useState(
     () => checkoutUrl + processUiSettings(uiSettings)
   );
