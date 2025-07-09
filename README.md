@@ -8,7 +8,7 @@ Use the package manager to install.
 
 ```bash
 npm i --save payout-react-native-sdk
-npm i --save @markodzurik/react-native-webview
+npm i --save react-native-webview
 ```
 
 ```bash
